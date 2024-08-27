@@ -35,7 +35,7 @@ const Footer = () => (
       </Grid>
       <Grid item xs={12} md={4}>
         <Typography variant="h6" gutterBottom>
-          Follow Us
+          Contact Us
         </Typography>
         <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
           <WhatsAppButton />
