@@ -5,7 +5,7 @@ import WhatsAppButton from './WhatsAppButton';
 import CallButton from './CallButton';
 
 const Footer = () => (
-  <Box sx={{ backgroundColor: '#f8f9fa', p: 4 }}>
+  <Box sx={{ backgroundColor: '', p: 4 }}>
     <Grid container spacing={3} sx={{ textAlign: 'center' }}>
       <Grid item xs={12} md={4}>
         <Typography variant="h6" gutterBottom>

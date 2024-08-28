@@ -12,23 +12,20 @@ const Header = () => {
   };
 
   const isActive = (path) => {
-    const baseStyle = { textDecoration: 'none' };
-    const activeStyle = { textDecoration: 'underline' };
+    const baseStyle = { textDecoration: 'none', color: 'black' };
+    const activeStyle = {
+      textDecoration: 'none',
+      color: 'black',
+      borderBottom: '3px solid black',
+      fontWeight: 'bold',
+    };
 
-    if (drawerOpen) {
-      return location.pathname === path
-        ? { ...baseStyle, color: 'black', ...activeStyle }
-        : { ...baseStyle, color: 'black' };
-    }
-
-    return location.pathname === path
-      ? { ...baseStyle, color: 'white', ...activeStyle }
-      : { ...baseStyle, color: 'white' };
+    return location.pathname === path ? activeStyle : baseStyle;
   };
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
         <Toolbar>
           {/* Logo */}
           <Box sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
@@ -38,16 +35,16 @@ const Header = () => {
               style={{ height: 40 }} // Adjust the height as needed
             />
           </Box>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" sx={{ flexGrow: 1, color: 'black' }}>
             Vapy Finance LTD
           </Typography>
           {/* Desktop Navigation */}
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-            <Button color="inherit" component={Link} to="/" style={isActive('/')}>Home</Button>
-            <Button color="inherit" component={Link} to="/about-us" style={isActive('/about-us')}>About Us</Button>
-            <Button color="inherit" component={Link} to="/contact-us" style={isActive('/contact-us')}>Contact Us</Button>
-            <Button color="inherit" component={Link} to="/services" style={isActive('/services')}>Services</Button>
-            <Button color="inherit" component={Link} to="/apply-loan" style={isActive('/apply-loan')}>Apply Loan</Button>
+            <Button component={Link} to="/" style={isActive('/')}>Home</Button>
+            <Button component={Link} to="/about-us" style={isActive('/about-us')}>About Us</Button>
+            <Button component={Link} to="/contact-us" style={isActive('/contact-us')}>Contact Us</Button>
+            <Button component={Link} to="/services" style={isActive('/services')}>Services</Button>
+            <Button component={Link} to="/apply-loan" style={isActive('/apply-loan')}>Apply Loan</Button>
           </Box>
           {/* Mobile Navigation */}
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
@@ -56,6 +53,7 @@ const Header = () => {
               color="inherit"
               onClick={toggleDrawer(true)}
               aria-label="menu"
+              sx={{ color: 'black' }}
             >
               <MenuIcon />
             </IconButton>
