@@ -7,6 +7,7 @@ import Services from './pages/Services';
 import LeadForm from './components/LeadForm';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ContactButtons from './components/ContactButtons'; // Import ContactButtons
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/apply-loan" element={<LeadForm />} />
       </Routes>
+      <ContactButtons /> {/* Include ContactButtons */}
       <Footer />
     </Router>
   );
