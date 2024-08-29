@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Box, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const location = useLocation();
@@ -16,7 +17,7 @@ const Header = () => {
     const activeStyle = {
       textDecoration: 'none',
       color: 'black',
-      borderBottom: '3px solid black',
+      borderBottom: '3px solid yellow', 
       fontWeight: 'bold',
     };
 
@@ -25,6 +26,16 @@ const Header = () => {
 
   return (
     <>
+     <Box sx={{ backgroundColor: '#182143', padding: '5px 20px', display: 'flex', alignItems: 'center' }}>
+        <PhoneIcon sx={{ color: '#dba722', mr: 1 }} />
+        <Typography variant="body2" sx={{ color: 'white', mr: 3 }}>
+          +919160461130
+        </Typography>
+        <EmailIcon sx={{ color: '#dba722', mr: 1 }} />
+        <Typography variant="body2" sx={{ color: 'white' }}>
+          info@vapyfinanceltd.com
+        </Typography>
+      </Box>
       <AppBar position="static" sx={{ backgroundColor: 'transparent', boxShadow: 'none' }}>
         <Toolbar>
           {/* Logo */}

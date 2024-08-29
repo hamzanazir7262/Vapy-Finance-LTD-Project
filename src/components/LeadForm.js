@@ -35,7 +35,7 @@ const LeadForm = () => {
           overflow: 'hidden', 
           mb: 3,
           marginBottom:5,
-          backgroundImage: `url('macro-shot-financial-concept_53876-14671.avif')`, // Replace with your cover image URL
+          backgroundImage: `url('breadcrumb-bg.jpg')`, // Replace with your cover image URL
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: 'white',
@@ -90,6 +90,7 @@ const LeadForm = () => {
           p: 3, 
           mt: -15, // Adjust to overlap the cover image if needed
           backgroundColor: 'white',
+          marginBottom:5,
           borderRadius: 2,
           boxShadow: 3,
           position: 'relative', // Ensure that the form box has a higher z-index

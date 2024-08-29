@@ -29,7 +29,7 @@ const ContactUs = () => {
               height: 300,
               overflow: 'hidden',
               mb: 3,
-              backgroundImage: `url('macro-shot-financial-concept_53876-14671.avif')`, // Replace with your cover image URL
+              backgroundImage: `url('breadcrumb-bg.jpg')`, // Replace with your cover image URL
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               color: 'white',

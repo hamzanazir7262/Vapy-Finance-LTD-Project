@@ -1,11 +1,45 @@
 // src/components/Footer.js
 import React from 'react';
-import { Box, Typography, Link, Grid } from '@mui/material';
+import { Box, Typography, Link, Grid ,Container} from '@mui/material';
 import WhatsAppButton from './WhatsAppButton';
 import CallButton from './CallButton';
-
+import PhoneIcon from '@mui/icons-material/Phone';
 const Footer = () => (
-  <Box sx={{ backgroundColor: '', p: 4 }}>
+  <>
+    <Box
+      sx={{
+        backgroundImage: 'url("/contact-widget.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        padding: '60px 0',
+      }}
+    >
+      <Container>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={6}>
+            <Box sx={{ color: 'white' }}>
+              <Typography variant="h4" gutterBottom>
+                Feel free to Contact Us
+              </Typography>
+              <Typography variant="body1">
+                We are here to assist you with all your gold loan needs. Visit our nearest branch or contact us through our website or customer service helpline. Let us help you achieve your financial goals with ease and confidence.
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Box sx={{ color: 'white', textAlign: 'center' }}>
+              <Typography variant="subtitle1">Contact Us Now!</Typography>
+              <Typography variant="h2" sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', mt: 2, fontSize:16 }}>
+                <PhoneIcon sx={{ fontSize: '16', mr: 2 }} />
+                (+91) 91604 61130
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
+ 
+  <Box sx={{ backgroundColor: '#182143',color: 'white', p: 4 }}>
     <Grid container spacing={3} sx={{ textAlign: 'center' }}>
       <Grid item xs={12} md={4}>
         <Typography variant="h6" gutterBottom>
@@ -35,7 +69,7 @@ const Footer = () => (
       </Grid>
       <Grid item xs={12} md={4}>
         <Typography variant="h6" gutterBottom>
-          Contact Us
+          Call Us
         </Typography>
         <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2 }}>
           <WhatsAppButton />
@@ -44,6 +78,7 @@ const Footer = () => (
       </Grid>
     </Grid>
   </Box>
+  </>
 );
 
 export default Footer;

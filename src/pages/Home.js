@@ -4,6 +4,7 @@ import { Box, Typography, Button, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import DiscoverLoans from '../components/DiscoverLoans';
 import Loader from '../components/Loader';
+import WhyChooseUs from '../components/WhyChooseUs';
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -135,6 +136,7 @@ At Vapy Finance LTD, our commitment lies in offering financial solutions that ar
           </Box>
           
           <DiscoverLoans />
+          <WhyChooseUs/>
         </>
       )}
     </>

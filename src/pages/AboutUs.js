@@ -24,10 +24,10 @@ const AboutUs = () => {
           <Box
             sx={{
               position: 'relative',
-              height: 300,
+              height: { xs: 200, md: 300 }, // Adjust height for responsiveness
               overflow: 'hidden',
               mb: 3,
-              backgroundImage: `url('macro-shot-financial-concept_53876-14671.avif')`, // Replace with your cover image URL
+              backgroundImage: `url('breadcrumb-bg.jpg')`, // Replace with your cover image URL
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               color: 'white',
@@ -75,13 +75,7 @@ const AboutUs = () => {
               <Typography color="text.primary">About Us</Typography>
             </Breadcrumbs>
           </Box>
-          <Box sx={{ p: 4 }}>
-            {/* Heading */}
-            {/* <Typography variant="h2" gutterBottom align="center">
-              About Us
-            </Typography> */}
-
-            {/* Content Section */}
+          <Box sx={{ px: { xs: 2, md: 4 }, py: 4 }}>
             <Grid container spacing={4} alignItems="center">
               {/* Text Section */}
               <Grid item xs={12} md={6}>
@@ -98,7 +92,7 @@ const AboutUs = () => {
 
               {/* Image Section */}
               <Grid item xs={12} md={6}>
-                <Card sx={{ maxWidth: 500 }}>
+                <Card sx={{ maxWidth: { xs: '100%', md: 500 }, mx: 'auto', boxShadow: 3 }}>
                   <CardMedia
                     component="img"
                     height="300"
@@ -114,38 +108,44 @@ const AboutUs = () => {
               </Grid>
             </Grid>
           </Box>
-          
+
           {/* New Section */}
-          <Box sx={{ p: 4 }}>
+          <Box sx={{ px: { xs: 2, md: 4 }, py: 4 }}>
             <Grid container spacing={4}>
               {/* Vision Section */}
               <Grid item xs={12} md={4}>
-                <Typography variant="h5" gutterBottom>
-                  Our Vision
-                </Typography>
-                <Typography variant="body1">
-                  By providing competitive interest rates and flexible repayment options, we aim to make financial empowerment a reality for everyone. With years of experience in the financial industry, we are a name you can trust.
-                </Typography>
+                <Box sx={{ p: 3, boxShadow: 4, borderRadius: 2 }}>
+                  <Typography variant="h5" gutterBottom>
+                    Our Vision
+                  </Typography>
+                  <Typography variant="body1">
+                    By providing competitive interest rates and flexible repayment options, we aim to make financial empowerment a reality for everyone. With years of experience in the financial industry, we are a name you can trust.
+                  </Typography>
+                </Box>
               </Grid>
 
               {/* Mission Section */}
               <Grid item xs={12} md={4}>
-                <Typography variant="h5" gutterBottom>
-                  Our Mission
-                </Typography>
-                <Typography variant="body1">
-                  Our mission is to offer fast, easy, and hassle-free gold loan services to our clients. We understand the urgency of financial needs, and our streamlined processes ensure that you get the funds you need without any delay.
-                </Typography>
+                <Box sx={{ p: 3, boxShadow: 4, borderRadius: 2 }}>
+                  <Typography variant="h5" gutterBottom>
+                    Our Mission
+                  </Typography>
+                  <Typography variant="body1">
+                    Our mission is to offer fast, easy, and hassle-free gold loan services to our clients. We understand the urgency of financial needs, and our streamlined processes ensure that you get the funds you need without any delay.
+                  </Typography>
+                </Box>
               </Grid>
 
               {/* Values Section */}
               <Grid item xs={12} md={4}>
-                <Typography variant="h5" gutterBottom>
-                  Our Values
-                </Typography>
-                <Typography variant="body1">
-                  We adhere to the highest ethical standards in all our dealings. We prioritize our customers’ needs and strive to exceed their expectations. We continuously seek innovative solutions to improve our services and customer experience.
-                </Typography>
+                <Box sx={{ p: 3, boxShadow: 4, borderRadius: 2 }}>
+                  <Typography variant="h5" gutterBottom>
+                    Our Values
+                  </Typography>
+                  <Typography variant="body1">
+                    We adhere to the highest ethical standards in all our dealings. We prioritize our customers’ needs and strive to exceed their expectations. We continuously seek innovative solutions to improve our services and customer experience.
+                  </Typography>
+                </Box>
               </Grid>
             </Grid>
           </Box>
