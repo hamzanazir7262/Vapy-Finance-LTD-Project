@@ -23,6 +23,16 @@ const loans = [
     description: 'Grow your business with our customized loans.',
     imageUrl: 'happy-couple-having-meeting-with-real-estate-agent-analyzing-blueprints-while-communicating_637285-3822.avif',
   },
+  {
+    title: 'Credit Loans',
+    description: 'Choose credit loan options to manage your expenses.',
+    imageUrl: 'credit-score-financial-banking-economy-concept_53876-123705.avif',
+  },
+  {
+    title: 'Loan Against Securities',
+    description: 'Get loans by pledging your securities as collateral.',
+    imageUrl: 'close-up-cash-mask-arrangement_23-2148773930.avif',
+  },
 ];
 
 const DiscoverLoans = () => (
@@ -55,7 +65,6 @@ const DiscoverLoans = () => (
             height="200"
             image={loan.imageUrl}
             alt={loan.title}
-            sx={{ transition: 'opacity 0.3s', opacity: 1 }}
           />
           <Box
             sx={{
@@ -70,16 +79,14 @@ const DiscoverLoans = () => (
               flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              opacity: 0,
               transition: 'opacity 0.3s',
+              opacity: 0,
+              zIndex: 2,
               '&:hover': { opacity: 1 },
             }}
           >
             <CardContent sx={{ textAlign: 'center' }}>
               <Typography variant="h6" gutterBottom>
-                {loan.title}
-              </Typography>
-              <Typography variant="body2" gutterBottom>
                 {loan.description}
               </Typography>
             </CardContent>
@@ -87,7 +94,6 @@ const DiscoverLoans = () => (
               sx={{
                 justifyContent: 'center',
                 mt: 2,
-                opacity: 1,
               }}
             >
               <Button
@@ -100,6 +106,28 @@ const DiscoverLoans = () => (
                 Apply Loan
               </Button>
             </CardActions>
+          </Box>
+          <Box
+            sx={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              backgroundColor: 'rgba(0, 0, 0, 0.4)',
+              color: 'white',
+              zIndex: 1,
+              transition: 'opacity 0.3s',
+              opacity: 1,
+           
+            }}
+          >
+            <Typography variant="h6" component="div">
+              {loan.title}
+            </Typography>
           </Box>
         </Card>
       ))}
