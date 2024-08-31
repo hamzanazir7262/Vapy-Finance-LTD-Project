@@ -23,7 +23,7 @@ const Footer = () => (
                 Feel free to Contact Us
               </Typography>
               <Typography variant="body1">
-                We are here to assist you with all your gold loan needs. Visit our nearest branch or contact us through our website or customer service helpline. Let us help you achieve your financial goals with ease and confidence.
+                We are here to assist you with all your loan needs. Visit our nearest branch or contact us through our website or customer service helpline. Let us help you achieve your financial goals with ease and confidence.
               </Typography>
             </Box>
           </Grid>
@@ -42,8 +42,8 @@ const Footer = () => (
 
     <Box sx={{ backgroundColor: '#182143', color: 'white', p: 4 }}>
       <Container>
-        <Grid container spacing={3} sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }}>
-          <Grid item xs={12} md={3}>
+        <Grid container spacing={2} sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }}>
+          <Grid item xs={12} md={2}>
             <Typography variant="h6" gutterBottom>
               Contact Us
             </Typography>
@@ -59,7 +59,7 @@ const Footer = () => (
               Guntur, AP-522034
             </Typography>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={2}>
             <Typography variant="h6" gutterBottom>
               Get in Touch
             </Typography>
@@ -69,7 +69,7 @@ const Footer = () => (
               Email: <Link href="mailto:info@vapyfinanceltd.com" color="inherit">info@vapyfinanceltd.com</Link>
             </Typography>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={2}>
             <Typography variant="h6" gutterBottom>
               Pages
             </Typography>
@@ -88,13 +88,38 @@ const Footer = () => (
               </Link>
             </Box>
           </Grid>
-          <Grid item xs={12} md={3}>
+          <Grid item xs={12} md={2}>
             <Typography variant="h6" gutterBottom>
               Call Us
             </Typography>
             <Box sx={{  }}>
               <WhatsAppButton />
               <CallButton />
+            </Box>
+          </Grid>
+          <Grid item xs={12} md={2}>
+            <Typography variant="h6" gutterBottom>
+              Our Services
+            </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+              <Link href="/apply-loan" color="inherit" underline="none">
+              Car Loans
+              </Link>
+              <Link href="/apply-loan" color="inherit" underline="none">
+              Home Loans
+              </Link>
+              <Link href="/apply-loan" color="inherit" underline="none">
+              Personal Loans
+              </Link>
+              <Link href="/apply-loan" color="inherit" underline="none">
+              Business Loans
+              </Link>
+              <Link href="/apply-loan" color="inherit" underline="none">
+              Credit Loans
+              </Link>
+              <Link href="/apply-loan" color="inherit" underline="none">
+              Loan Against Securities
+              </Link>
             </Box>
           </Grid>
         </Grid>
